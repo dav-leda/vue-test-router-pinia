@@ -1,0 +1,51 @@
+
+
+
+
+pre {
+  font-size: 0.8rem;
+  text-align: left;
+}
+
+button {
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  color: snow;
+  background-color: green;
+  opacity: 0.8;
+}
+
+button:hover {
+  opacity: 1;
+}
+
+strong {
+  font-weight: bold;
+}
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+
+table.striped tr:nth-child(even) {
+  background-color: rgba(200, 200, 200, 0.263)
+}
+
+
+th, tfoot td {
+  font-weight: bold;
+  border-bottom: 2px solid #bbb;
+  border-top: 2px solid #bbb;
+  background-color: rgba(200, 200, 200, 0.539)
+}
+
+th, td {  
+  text-align: left;
+  padding: 0.5rem 0.5rem;
+}
