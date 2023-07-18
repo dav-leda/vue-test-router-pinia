@@ -46,9 +46,10 @@ const addPinia = () => store.addToCart(products[1])
       class="btn-danger m-1 no-wrap"
       @click="store.$reset()"
     > reset store </button>
+    
   </div>
   
-  <pre class="mt-1">Array en data: {{ state.cart }}</pre>
+  <pre class="mt-1">Array local: {{ state.cart }}</pre>
 
   <pre class="mt-2">Array en Pinia: {{ store.getProductsInCart }}</pre>
 

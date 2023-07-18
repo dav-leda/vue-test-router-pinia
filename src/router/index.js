@@ -3,13 +3,13 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import VistaUno from '../views/VistaUno.vue'
 import VistaDos from '../views/VistaDos.vue'
+import ProductView from '../views/ProductView.vue'
 
 const router = createRouter({
 
   history: createWebHistory(import.meta.env.BASE_URL),
   
   scrollBehavior(to, from, savedPosition) {
-    // always scroll to top
     return { top: 0 }
   },
   
@@ -28,6 +28,11 @@ const router = createRouter({
       path: '/vista-dos',
       name: 'vista-dos',
       component: VistaDos
+    },
+    {
+      path: '/product-view',
+      name: 'product-view',
+      component: ProductView
     },
   ]
 })

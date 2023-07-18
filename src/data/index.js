@@ -12,6 +12,12 @@ export const products = [
     name: 'Product 2',
     price: 200,
     image: 'https://picsum.photos/200/300',
+  },
+  {
+    id: '3',
+    name: 'Product 3',
+    price: 300,
+    image: 'https://picsum.photos/200/300',
   }
 ]
 

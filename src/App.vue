@@ -1,6 +1,5 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
-
 </script>
 
 <template>
@@ -11,6 +10,7 @@ import { RouterLink, RouterView } from 'vue-router'
         <RouterLink to="/">VueRouter+Pinia</RouterLink>
         <RouterLink to="/vista-uno">Vista 1</RouterLink>
         <RouterLink to="/vista-dos">Vista 2</RouterLink>
+        <RouterLink to="/product-view">Product Detail</RouterLink>
       </nav>
     </div>
   </header>

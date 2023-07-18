@@ -24,13 +24,17 @@ export const cartStore = defineStore('cart', {
       return this.cart
     },
     getTotalPrice(): number {
-      return this.cart.reduce((acc: number, curr: CartItem) => acc + curr.price, 0)
+      return this.cart.reduce(sumTotal, 0)
     },
     getCartTotal(): number {
       return this.cart.length
     },
     getProductById: (state) => (id: string): CartItem | undefined => {
       return state.cart.find((item) => item.id === id)
+    },
+    getProductQty: (state) => (id: string): number => {
+      const product = state.cart.find((item) => item.id === id)
+      return product ? product.qty : 1
     }
   },
 
@@ -51,6 +55,22 @@ export const cartStore = defineStore('cart', {
       }
     },
 
+    incrementQty(id: string): void {
+      const product = this.getProductById(id)
+      if (product) {
+        product.qty++
+        product.subtotal = product.qty * product.price
+      }
+    },
+
+    decrementQty(id: string): void {
+      const product = this.getProductById(id)
+      if (product && product.qty > 1) {
+        product.qty--
+        product.subtotal = product.qty * product.price
+      }
+    },
+
     $reset(): void {
       this.cart = []
     }
@@ -58,3 +78,7 @@ export const cartStore = defineStore('cart', {
 })
 
 
+// Reducer callback
+function sumTotal(total: number, product: CartItem): number {
+  return total + product.subtotal
+}
