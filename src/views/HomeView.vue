@@ -10,13 +10,14 @@
   
     <p class="mt-1 max-w-30">
       Como pueden ver en este ejemplo, cuando pasamos de una vista a otra
-      con <a href="https://router.vuejs.org/" target="_blank">Vue Router</a> toda la información cargada 
-      en el objeto <i>data</i> del componente se pierde ya que el componente vuelve a ser creado en cada navegación
-      con lo cual <i>data</i> vuelve a su estado inicial.
+      con <a href="https://router.vuejs.org/" target="_blank">Vue Router</a> toda la información
+      del estado local del componente se pierde 
+      ya que el componente vuelve a ser creado en cada navegación.
       <br><br>
       Para evitar perder información entre una vista y otra
       debemos usar una herramienta de administración de estado global para Vue
-      como <a href="https://vuex.vuejs.org/" target="_blank">Vuex</a> o, preferentemente, <a href="https://pinia.vuejs.org/" target="_blank">Pinia</a>.
+      como <a href="https://vuex.vuejs.org/" target="_blank">Vuex</a> 
+      o, preferentemente, <a href="https://pinia.vuejs.org/" target="_blank">Pinia</a>.
       <br><br>
       De esta forma, no sólo podemos persistir la información entre una vista y otra
       sino también compartir el estado global de la aplicación entre todos los componentes.
