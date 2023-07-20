@@ -15,6 +15,7 @@ interface CartItem extends Product {
 }
 
 export const cartStore = defineStore('cart', {
+  
   state: () => ({
     cart: [] as CartItem[],
   }),

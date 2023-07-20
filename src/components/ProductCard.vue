@@ -3,7 +3,6 @@
 
 import type { PropType } from 'vue'
 
-
 import ProductCounter from './ProductCounter.vue'
 import AddToCart from './AddToCart.vue'
 

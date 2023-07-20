@@ -1,13 +1,22 @@
 
-<script setup>
+<script setup lang="ts">
 
 import { ref } from 'vue'
+import type { Ref } from 'vue'
 
 import ProductCard from '../components/ProductCard.vue';
 
 import { products } from '../data'
 
-const product = ref(products[2])
+interface Product {
+  id: string 
+  name: string
+  price: number
+  image: string
+}
+
+
+const product: Ref<Product> = ref(products[2])
 
 </script>
 
