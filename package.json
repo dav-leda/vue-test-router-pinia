@@ -1,5 +1,6 @@
 {
   "name": "vue-test-router-pinia",
+  "homepage": "https://dav-leda.github.io/vue-test-router-pinia/",
   "version": "0.0.0",
   "private": true,
   "scripts": {
